@@ -1,0 +1,230 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #1a1f36;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Ubuntu, sans-serif;
+  text-align: center;
+}
+
+body {
+  text-decoration: none;
+  box-sizing: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #777;
+  background-image: url(src/assets/Data-Data-Everywhere.jpeg);
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+}
+
+.topSection {
+  height: 11rem;
+  width: 100%;
+  padding-top: 50px;
+  background-color: black;
+  color: aqua;
+}
+
+.title {
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  width: 900px;
+  margin: 30px;
+}
+
+.container .card .box {
+  --background: white;
+  --border: rgba(0, 0, 0, 0.125);
+  --highlight: #306090;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: var(--borderRadius);
+  box-shadow: 0 1rem 1rem -0.75rem var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.subTitle {
+  background-color: black;
+  color: white;
+  height: 90px;
+  margin: 0;
+  padding: 20px;
+}
+
+.content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 715px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.container .card .box .content .form-group .form-check-input {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  font-weight: 00;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.btn-primary {
+  position: relative;
+  background-color: rgb(54, 54, 230);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: 0ch;
+  margin-right: 10px;
+  color: white;
+}
+
+.secundary {
+  position: relative;
+  background-color: rgb(255, 0, 0);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 5px;
+  border: 0ch;
+  color: white;
+}
+
+.edit_button {
+  position: relative;
+  background-color: rgb(54, 54, 2430);
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 5px;
+  border: 0ch;
+  margin-right: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.clear_button {
+  position: relative;
+  background-color: rgb(255, 51, 0);
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 5px;
+  border: 0ch;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.userCards {
+  text-decoration: none;
+  padding-bottom: 20px;
+  border: 0.5px solid rgb(207, 207, 207);
+  margin: 20px;
+  width: 320px;
+  line-height: 30px;
+}
+
+.userCards::marker {
+  text-decoration: none;
+  color: red;
+}
+
+.titleUser {
+  background-color: #1a1f36;
+  color: white;
+  padding: 10px;
+  margin: 0;
+}
+
+.userBoxes {
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 850px;
+}
+
+.container .card .box .content .btn-secundary {
+  position: relative;
+  background-color: rgb(255, 0, 0);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+.container .card .box .content .form-control {
+  width: 180px;
+  color: hsl(var(--fgColorH), var(--fgColorS), var(--fgColorL));
+  font-size: 0.825rem;
+  order: 4;
+  text-align: center;
+  margin-top: 0.25rem;
+  outline: 1px dashed transparent;
+  outline-offset: 2px;
+  display: inline;
+}
+
+label {
+  padding-right: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: left;
+  padding-left: 220px;
+}
+
+.form-group {
+  line-height: 30px;
+  display: flex;
+  /* justify-content: center; */
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  padding-top: 20px;
+}
+
+#email {
+  width: 217px;
+}
+
+#password {
+  width: 190px;
+}
+
+#birthday {
+  width: 196px;
+}
+
+.newUserTitle {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #777;
+}

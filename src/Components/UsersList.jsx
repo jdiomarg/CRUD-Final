@@ -1,7 +1,7 @@
 import React from "react";
-import Favicon from 'react-favicon'
 
 const UsersList = ({ users, selecteduser, deleteuser }) => {
+
     return (
         <div className="container">
             <div className="card">
@@ -21,7 +21,7 @@ const UsersList = ({ users, selecteduser, deleteuser }) => {
                                             onClick={() => selecteduser(user)}
                                         >
                                             {" "}
-                                            edit{" "}
+                                            Edit{" "}
                                         </button>
                                         <button
                                             className="clear_button"

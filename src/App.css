@@ -107,6 +107,7 @@ body {
   border: 0ch;
   margin-right: 10px;
   color: white;
+  cursor: pointer;
 }
 
 .secundary {
@@ -117,6 +118,7 @@ body {
   border-radius: 5px;
   border: 0ch;
   color: white;
+  cursor: pointer;
 }
 
 .edit_button {

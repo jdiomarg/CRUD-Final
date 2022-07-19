@@ -28,18 +28,17 @@ export default function UsersForms({ getUsers, userSelected, deselectUser }) {
             birthday: birthday
         };
         if (userSelected !== null) {
-            alert("editando");
+            alert("USER UPDATED");
             axios
                 .put(
                     `https://users-crud1.herokuapp.com/users/${userSelected.id}/`,
                     user
                 )
                 .then(() => {
-                    getUsers();
                     reset();
-                    deselectUser();
                 });
         } else {
+            alert("USER CREATED");
             axios
                 .post("https://users-crud1.herokuapp.com/users/", user)
                 .then(() => {
@@ -57,10 +56,6 @@ export default function UsersForms({ getUsers, userSelected, deselectUser }) {
         setEmail("");
         setPassword("");
         setBirthday("");
-    };
-
-    const clear = () => {
-        reset();
     };
 
     return (
@@ -121,11 +116,8 @@ export default function UsersForms({ getUsers, userSelected, deselectUser }) {
                                 />
                             </div>
                             <div className="buttons">
-                                <button type="submit" className="btn-primary">
-                                    Create New User
-                                </button>
-                                <button className="secundary" type="button" onClick={clear}>
-                                    Clear Fields
+                                <button className="secundary" type="submit">
+                                    {userSelected !== null ? "Update" : "Create"}
                                 </button>
                             </div>
                         </div>

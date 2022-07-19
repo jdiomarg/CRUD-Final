@@ -26,7 +26,7 @@ export default function UsersForms({ getUsers, userSelected, deselectUser }) {
             email: email,
             password: password,
             birthday: birthday
-        };
+        }
         if (userSelected !== null) {
             alert("USER UPDATED");
             axios
@@ -35,8 +35,10 @@ export default function UsersForms({ getUsers, userSelected, deselectUser }) {
                     user
                 )
                 .then(() => {
+                    getUsers();
                     reset();
-                });
+                })
+                .catch((error) => console.log(error.response));
         } else {
             alert("USER CREATED");
             axios

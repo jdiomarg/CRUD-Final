@@ -35,7 +35,7 @@ export default function UsersForms({ getUsers, userSelected, deselectUser }) {
                     user
                 )
                 .then(() => {
-                    getUsers();
+                    // getUsers();
                     reset();
                 })
                 .catch((error) => console.log(error.response));

@@ -25,7 +25,7 @@ export default function UsersForms({ getUsers, userSelected, deselectUser }) {
             last_name: lastname,
             email: email,
             password: password,
-            birthday: birthday
+            birthday: birthday,
         }
         if (userSelected !== null) {
             alert("USER UPDATED");
@@ -35,8 +35,10 @@ export default function UsersForms({ getUsers, userSelected, deselectUser }) {
                     user
                 )
                 .then(() => {
-                    // getUsers();
+                    getUsers();
                     reset();
+                    deselectUser();
+
                 })
                 .catch((error) => console.log(error.response));
         } else {
@@ -46,6 +48,7 @@ export default function UsersForms({ getUsers, userSelected, deselectUser }) {
                 .then(() => {
                     getUsers();
                     reset();
+                    deselectUser();
                 })
                 .catch((error) => console.log(error.response));
             console.log(user);

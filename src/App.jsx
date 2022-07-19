@@ -23,7 +23,7 @@ export default function App() {
       .then((res) => setUsers(res.data));
   };
 
-  const deleteuser = (users) => {
+  const deleteUser = (users) => {
     axios
       .delete(`https://users-crud1.herokuapp.com/users/${users.id}/`)
       .then(() => getUsers());
@@ -40,14 +40,14 @@ export default function App() {
         <p className="title">Developed by Juanery Gonzalez for Academlo, 2022</p>
       </div>
       <UsersForms
-        deselectuser={deselectUser}
+        deselectUser={deselectUser}
         userSelected={userSelected}
-        getusers={getUsers}
+        getUsers={getUsers}
       />
       <h1 className="subTitle">Users List</h1>
       <UsersList
-        deleteuser={deleteuser}
-        selecteduser={selectedUser}
+        deleteUser={deleteUser}
+        selectedUser={selectedUser}
         users={users}
       ></UsersList>
     </div>
